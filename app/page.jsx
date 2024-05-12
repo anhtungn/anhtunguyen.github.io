@@ -5,9 +5,6 @@ import Education from "./components/Education";
 import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 
-// import AchievementsSection from "./components/AchievementsSection";
-// import {motion} from "framer-motion";
-
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-gradient-to-b from-blue-100 to-red-100">
@@ -23,8 +20,3 @@ export default function Home() {
   );
 }
 
-// const Homepage = () => {
-//   return <div>Hello World</div>;
-// };
-
-// export default Homepage;

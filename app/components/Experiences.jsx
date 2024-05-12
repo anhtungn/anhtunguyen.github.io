@@ -31,7 +31,7 @@ const Experience = () => {
   const ref = useRef(null);
   return (
     <section id="experiences" ref={ref} className="mb-28 scroll-mt-10 text-center mx-auto">
-      <h2 className="text-3xl font-semibold mx-auto">Experiences</h2>
+      <h2 className="text-3xl font-semibold mx-auto">Work Experiences</h2>
       <VerticalTimeline lineColor="black">
         {experiencesData.map((item, index) => (
           <VerticalTimelineElement
@@ -46,7 +46,7 @@ const Experience = () => {
             }}
             contentArrowStyle={{ borderRight: "2rem solid #9ca3af" }}
             date={item.date}
-            dateClassName="text-black"
+            dateClassName="text-purple-500 font-bold"
             icon={item.icon}
             iconStyle={{
               background: "#ffffff",

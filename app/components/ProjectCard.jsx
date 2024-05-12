@@ -2,6 +2,7 @@ import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
+// https://www.youtube.com/watch?v=yp6tRkS-QBU&ab_channel=TimeToProgram
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
     <div>
