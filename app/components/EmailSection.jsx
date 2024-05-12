@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import GithubIcon from "../../public/github-icon.svg";
-import LinkedinIcon from "../../public/linkedin-icon.svg";
+import GithubIcon from "../../public/github.png";
+import LinkedinIcon from "../../public/linkedin.png";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -46,10 +46,10 @@ const EmailSection = () => {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">
+        <h5 className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-xl lg:text-3xl">
           Let&apos;s Connect
         </h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
+        <p className="text-black mb-4 max-w-md text-40">
           {" "}
           I&apos;m currently looking for new opportunities, my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
@@ -57,10 +57,10 @@ const EmailSection = () => {
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://www.linkedin.com/in/anhtu-nguyen99/">
-            <Image src={GithubIcon} alt="Github Icon" />
+          <Image src={LinkedinIcon} alt="Linkedin Icon" width={40} height={40}/>
           </Link>
           <Link href="https://github.com/anhtungn">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+          <Image src={GithubIcon} alt="Github Icon" width={40} height={40} />
           </Link>
         </div>
       </div>
@@ -74,7 +74,7 @@ const EmailSection = () => {
             <div className="mb-6">
               <label
                 htmlFor="email"
-                className="text-white block mb-2 text-sm font-medium"
+                className="text-black block mb-2 text-sm font-medium"
               >
                 Your email
               </label>
@@ -90,7 +90,7 @@ const EmailSection = () => {
             <div className="mb-6">
               <label
                 htmlFor="subject"
-                className="text-white block text-sm mb-2 font-medium"
+                className="text-black block text-sm mb-2 font-medium"
               >
                 Subject
               </label>
@@ -106,7 +106,7 @@ const EmailSection = () => {
             <div className="mb-6">
               <label
                 htmlFor="message"
-                className="text-white block text-sm mb-2 font-medium"
+                className="text-black block text-sm mb-2 font-medium"
               >
                 Message
               </label>
@@ -119,7 +119,7 @@ const EmailSection = () => {
             </div>
             <button
               type="submit"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              className="bg-primary-500 hover:bg-primary-600 text-black font-medium py-2.5 px-5 rounded-lg w-full"
             >
               Send Message
             </button>

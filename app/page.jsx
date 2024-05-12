@@ -1,6 +1,9 @@
 import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
 import Experience from "./components/Experiences";
+import Education from "./components/Education";
+import EmailSection from "./components/EmailSection";
+import Footer from "./components/Footer";
 
 // import AchievementsSection from "./components/AchievementsSection";
 // import {motion} from "framer-motion";
@@ -12,7 +15,10 @@ export default function Home() {
         <HeroSection />
         <Skills />
         <Experience />
+        <Education />
+        <EmailSection />
       </div>
+        <Footer />
     </main>
   );
 }

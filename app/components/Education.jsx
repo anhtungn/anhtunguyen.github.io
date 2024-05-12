@@ -4,8 +4,8 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "react-vertical-timeline-component/style.min.css";
 import { CgWorkAlt } from "react-icons/cg";
 
-const Experience = () => {
-  const experiencesData = [
+const Education = () => {
+  const educationData = [
     {
       title: "Data Scientist",
       location: "VNDIRECT Securities Corporation - Hanoi,Vietnam",
@@ -30,10 +30,10 @@ const Experience = () => {
   ];
   const ref = useRef(null);
   return (
-    <section id="experiences" ref={ref} className="mb-28 scroll-mt-10 text-center mx-auto">
-      <h2 className="text-3xl font-semibold mx-auto">Experiences</h2>
+    <section id="educations" ref={ref} className="mb-28 scroll-mt-10 text-center mx-auto">
+      <h2 className="text-3xl font-semibold mx-auto">Educations</h2>
       <VerticalTimeline lineColor="black">
-        {experiencesData.map((item, index) => (
+        {educationData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
             visible = {true}
@@ -64,4 +64,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Education;

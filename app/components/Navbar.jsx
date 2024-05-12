@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import NavLink from "./NavLink";
 
-import { motion } from "framer-motion";
-
 const navLinks = [
   {
     title: "Home",
@@ -16,7 +14,7 @@ const navLinks = [
   },
   {
     title: "Projects",
-    path: "/projects",
+    path: "#projects",
   },
   {
     title: "Educations",
@@ -24,63 +22,12 @@ const navLinks = [
   },
   {
     title: "Contact",
-    path: "/contact",
+    path: "#contact",
   },
 ];
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  
-  const topVariants={
-    closed:{
-      rotate:0,
-    },
-    opened:{
-      rotate:45,
-      backgroundColor:"rgb(255,255,255)",
-    }
-  };
-
-  const centerVariants={
-    closed:{
-      rotate:1,
-    },
-    opened:{
-      opacity:0,
-    }
-  };
-
-  const bottomVariants={
-    closed:{
-      rotate:0,
-    },
-    opened:{
-      rotate:-45,
-      backgroundColor:"rgb(255,255,255)",
-    }
-  };
-
-  const ListVariants = {
-    closed:{
-      x:"100vw",
-    },
-    opened:{
-      x:0,
-      when:"beforeChildren",
-      transition:{staggerChildren:0.2},
-    }
-  }
-
-  const ListItemsVariants = {
-    closed:{
-      x:-10,
-      opacity:0,
-    },
-    opened:{
-      x:0,
-      opacity:1,
-    }
-  }
 
   return (
     <div className="flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl mt-10">
@@ -95,19 +42,19 @@ const Navbar = () => {
           className="w-15 h-8 flex flex-col justify-between z-50 relative"
           onClick={() => setNavbarOpen(prev => !prev)}
         >
-          <motion.div variants={topVariants} animate={navbarOpen ? "opened" : "closed"} className="w-10 h-1 bg-white rounded origin-left"></motion.div>
-          <motion.div variants={centerVariants} animate={navbarOpen ? "opened" : "closed"} className="w-10 h-1 bg-white rounded origin-left"></motion.div>
-          <motion.div variants={bottomVariants} animate={navbarOpen ? "opened" : "closed"} className="w-10 h-1 bg-white rounded origin-left"></motion.div>
+          <div className="w-10 h-1 bg-white rounded origin-left"></div>
+          <div className="w-10 h-1 bg-white rounded origin-left"></div>
+          <div className="w-10 h-1 bg-white rounded origin-left"></div>
         </button>
 
         {navbarOpen && (
-          <motion.div variants={ListVariants} initial='closed' animate='opened' className="absolute top-0 right-0 h-screen w-screen bg-black text-white flex flex-col items-center gap-8 text-4xl z-40">
+          <div className="absolute top-0 right-0 h-screen w-screen bg-black text-white flex flex-col items-center gap-8 text-4xl z-40">
             {navLinks.map((link, index) => (
-              <motion.div variants={ListItemsVariants} className="" key={index}>
+              <div className="" key={index}>
                 <NavLink href={link.path} title={link.title} />
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         )}
       </div>
 
