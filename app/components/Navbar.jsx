@@ -2,10 +2,7 @@
 
 import React, { useState } from "react";
 import NavLink from "./NavLink";
-import GithubIcon from "../../public/github.png";
-import LinkedinIcon from "../../public/linkedin.png";
-import Link from "next/link";
-import Image from "next/image";
+
 import { motion } from "framer-motion";
 
 const navLinks = [
@@ -15,7 +12,7 @@ const navLinks = [
   },
   {
     title: "Experiences",
-    path: "/experiences",
+    path: "#experiences",
   },
   {
     title: "Projects",
@@ -23,7 +20,7 @@ const navLinks = [
   },
   {
     title: "Educations",
-    path: "/educations",
+    path: "#educations",
   },
   {
     title: "Contact",
@@ -86,7 +83,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 mt-10 ">
+    <div className="flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl mt-10">
       <div className="hidden md:flex gap-4 text-black">
         {navLinks.map((link, index) => (
           <NavLink key={index} href={link} />
@@ -94,14 +91,6 @@ const Navbar = () => {
       </div>
       
       <div className="hidden md:flex gap-4">
-        <Link href="https://www.linkedin.com/in/anhtu-nguyen99/">
-          <Image src={LinkedinIcon} alt="Linkedin Icon" width={24} height={24}/>
-        </Link>
-        <Link href="https://github.com/anhtungn">
-          <Image src={GithubIcon} alt="Github Icon" width={24} height={24} />
-        </Link>
-      </div>
-      <div className="md:hidden">
         <button
           className="w-15 h-8 flex flex-col justify-between z-50 relative"
           onClick={() => setNavbarOpen(prev => !prev)}

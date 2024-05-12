@@ -1,22 +1,18 @@
 import HeroSection from "./components/HeroSection";
-import AboutSection from "./components/AboutSection";
-import ProjectsSection from "./components/ProjectsSection";
-import EmailSection from "./components/EmailSection";
-import Footer from "./components/Footer";
+import Skills from "./components/Skills";
+import Experience from "./components/Experiences";
+
 // import AchievementsSection from "./components/AchievementsSection";
-import {motion} from "framer-motion";
+// import {motion} from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-gardient-to-b from-white-100 to-red-100">
+    <main className="flex min-h-screen flex-col bg-gradient-to-b from-blue-100 to-red-100">
       <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
-        {/* <AchievementsSection /> */}
-        <AboutSection />
-        <ProjectsSection />
-        <EmailSection />
+        <Skills />
+        <Experience />
       </div>
-      <Footer />
     </main>
   );
 }

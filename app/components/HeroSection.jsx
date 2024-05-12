@@ -1,13 +1,19 @@
 "use client";
-import React from "react";
+import {useRef, React} from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer"; // Thêm useInView từ react-intersection-observer
+import GithubIcon from "../../public/github.png";
+import LinkedinIcon from "../../public/linkedin.png";
 
 const HeroSection = () => {
+  const skillRef = useRef();
+  const [isSkillRefInView, entry] = useInView({ triggerOnce: true }); // Thêm triggerOnce: true để chỉ kích hoạt một lần
+
   return (
-    <section className="lg:py-16 mt-0">
+    <section>
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -32,25 +38,39 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-black text-base sm:text-lg mb-6 lg:text-xl">
-          Welcome to my digital home, where creativity meets craftsmanship through data-driven design and innovation.
+          <p className="text-black text-base sm:text-lg mb-6 lg:text-xl text-justify">
+            Welcome to my digital home, where creativity meets craftsmanship through data-driven design and innovation.
+            <br /><br />
+            I am a full stack web developer with a passion for creating interactive and responsive web applications.
+            I have experience working with JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, and Git.
+            I am a quick learner and I am always looking to expand my knowledge and skill set.
+            I am a team player and I am excited to work with others to create amazing applications.
           </p>
-          <div>
+          <div className="flex items-center">
             <Link
               href="/contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purrple-500 to-pink-500 hover:bg-slate-200 text-white"
+              className="px-6 inline-block py-3 rounded-full bg-gradient-to-br from-blue-500 via-purrple-500 to-pink-500 hover:bg-slate-200 text-white "
             >
-              Hire Me
+              <div>Contact me here →</div>
             </Link>
             <Link
-              href="/"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br  from-blue-500 via-pink-500 to-purple-500 hover:bg-slate-800 text-white mt-3"
+              href="https://drive.google.com/file/d/1-vSxZz7WkKMUvz3xLMvLj6QJCX-lkdnI/view?usp=sharing"
+              className="px-1 inline-block py-1 rounded-full bg-gradient-to-br from-blue-500 via-pink-500 to-purple-500 hover:bg-slate-800 text-white ml-4"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 ">
                 Download CV
               </span>
             </Link>
+            <div>
+              <Link href="https://www.linkedin.com/in/anhtu-nguyen99/" className="px-1 inline-block ml-4">
+                <Image src={LinkedinIcon} alt="Linkedin Icon" width={30} height={30}/>
+              </Link>
+              <Link href="https://github.com/anhtungn" className="px-1 inline-block ml-4">
+                <Image src={GithubIcon} alt="Github Icon" width={30} height={30} />
+              </Link>
+            </div>
           </div>
+
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -68,6 +88,7 @@ const HeroSection = () => {
             />
           </div>
         </motion.div>
+  
       </div>
     </section>
   );
