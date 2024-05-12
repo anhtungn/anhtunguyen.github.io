@@ -10,6 +10,7 @@ const Education = () => {
       title: "Master’s Degree, Data Science & Business Analysis",
       location: "EDC Paris Business School - Paris, France",
       description: "Developed skills in the 5 interconnected areas of data science, including Information Systems & IT, AI for Cybersecurity, Mathematics & Statistics, Business & Areas of expertise, and Communication & Impact",   
+      icon: <FaGraduationCap />,
       date: "2021 - 2023",
     },
     {
