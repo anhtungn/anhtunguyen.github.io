@@ -29,7 +29,7 @@ const techniquesSkills = ["Data Science", "Data Analysis", "Data Visualization",
 const softSkills = ["Communication", "Attention to Detail", "Problem Solving", "Critical Thinking", "Adaptability",
                     "Teamwork", "Leadership", "Time Management", "Agile Methodology", "Creative"]
 const Skills = () => {
-  const [activeTab, setActiveTab] = useState("tools");
+  const [activeTab, setActiveTab] = useState("All");
   const [isPending, startTransition] = useTransition();
 
   const ref = useRef(null);
@@ -77,10 +77,10 @@ const Skills = () => {
     <section
       id="skills"
       ref={ref}
-      className="mb-28 scroll-mt-28 text-center sm:mb-40 mx-auto mt-20"
+      className="mb-28 scroll-mt-28 text-center sm:mb-40 mt-20 "
     >
-      <div className="mb-6">
-        <h2 className="text-3xl font-semibold mb-2 mx-auto">
+      <div>
+        <h2 className="text-3xl font-semibold mb-2">
           Skills & Technologies
         </h2>
         {/* <p className="text-gray-600 mx-auto">
@@ -110,7 +110,7 @@ const Skills = () => {
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {filteredSkills(activeTab).map((skill, index) => (
           <motion.li
-            className="bg-black borderBlack rounded-xl px-5 py-3 dark:bg-white/10 text-white/80"
+            className="bg-black borderBlack rounded-xl px-5 py-3 text-white/80"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"

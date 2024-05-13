@@ -23,7 +23,7 @@ const Education = () => {
   ];
   const ref = useRef(null);
   return (
-    <section id="educations" ref={ref} className="mb-28 scroll-mt-10 text-center mx-auto">
+    <section id="educations" ref={ref} className="mb-28 text-center mx-auto mt-20">
       <h2 className="text-3xl font-semibold mx-auto ">Educations</h2>
       <VerticalTimeline lineColor="black">
         {educationData.map((item, index) => (
@@ -49,7 +49,7 @@ const Education = () => {
           >
             <h3 className="font-bold capitalize text-purple-500">{item.title}</h3>
             <p className="font-normal !mt-0 ">{item.location}</p>
-            <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75 text-justify">{item.description}</p>
+            <p className="!mt-1 !font-normal text-black dark:text-black/75 text-justify">{item.description}</p>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>

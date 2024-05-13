@@ -3,6 +3,8 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experiences";
 import Education from "./components/Education";
 import EmailSection from "./components/EmailSection";
+import ProjectsSection from "./components/ProjectsSection";
+
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -12,6 +14,7 @@ export default function Home() {
         <HeroSection />
         <Skills />
         <Experience />
+        <ProjectsSection />
         <Education />
         <EmailSection />
       </div>

@@ -48,7 +48,7 @@ const HeroSection = () => {
           </p>
           <div className="flex items-center">
             <Link
-              href="/contact"
+              href="#contact"
               className="px-6 inline-block py-3 rounded-full bg-gradient-to-br from-blue-500 via-purrple-500 to-pink-500 hover:bg-slate-200 text-white "
             >
               <div>Contact me here →</div>
